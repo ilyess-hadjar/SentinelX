@@ -1,0 +1,4 @@
+﻿customtkinter==6.0.0
+matplotlib
+winotify==1.1.0
+watchdog==6.0.0

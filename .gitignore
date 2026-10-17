@@ -1,0 +1,41 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Secrets et clés de signature
+.env
+.env.*
+*.key
+*.key.*
+*secret*
+*credential*
+*token*
+
+# Données locales et références de confiance
+*.db
+*.db-*
+baseline_integrity.json
+baseline_integrity.json.*
+
+# Rapports générés
+reports/
+
+# Sauvegardes locales
+*.bak
+*.bak-*
+*.disk-backup
+*.security-test-backup
+test.txt.backup
+test_local_data/
+
+
+dashboard_config.json
+
+# Copies locales de sauvegarde
+*.bak
+*.bak-*
+*.disk-backup
+*.sauvegarde-securite
+*.security-test-backup
+*.backup
