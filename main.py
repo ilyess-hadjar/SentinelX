@@ -1,4 +1,4 @@
-﻿
+
 import argparse
 import time
 from notifications import send_notification
@@ -76,27 +76,27 @@ def initialize_baseline(directory, database_path):
     previous = load_snapshot(database_path, directory=root)
 
     if previous:
-        print(f"[REFUS] Une r?f?rence existe d?j? pour : {root}")
+        print(f"[REFUS] Une référence existe déjà pour : {root}")
         print("Utilise --accept-changes pour la remplacer volontairement.")
         return
 
     try:
         current = scan_directory(root)
     except OSError as exc:
-        print(f"[ERREUR] R?f?rence non cr??e : scan incomplet. {exc}")
+        print(f"[ERREUR] Référence non créée : scan incomplet. {exc}")
         return
 
     print(f"\nDossier : {root}")
-    print(f"{len(current)} fichier(s) seront enregistr?s comme r?f?rence.")
+    print(f"{len(current)} fichier(s) seront enregistrés comme référence.")
 
-    answer = input("Cr?er cette r?f?rence ? Tape OUI pour confirmer : ")
+    answer = input("Créer cette référence ? Tape OUI pour confirmer : ")
 
     if answer.strip() != "OUI":
-        print("[ANNUL?] R?f?rence non cr??e.")
+        print("[ANNULÉ] Référence non créée.")
         return
 
     save_snapshot(current, database_path, directory=root)
-    print("[OK] R?f?rence de confiance cr??e.")
+    print("[OK] Référence de confiance créée.")
 
 
 
@@ -223,7 +223,7 @@ def accept_changes(directory, database_path):
     try:
         current = scan_directory(root)
     except OSError as exc:
-        print(f"[ERREUR] Modifications non accept?es : scan incomplet. {exc}")
+        print(f"[ERREUR] Modifications non acceptées : scan incomplet. {exc}")
         return
 
     changes = compare_snapshots(previous, current)
@@ -266,7 +266,7 @@ def main():
         description="File Integrity Monitor - surveillance SHA-256"
     )
 
-    parser.add_argument("directory", nargs="?", help="Dossier Ã  surveiller")
+    parser.add_argument("directory", nargs="?", help="Dossier à surveiller")
     parser.add_argument(
         "--interval",
         type=int,
