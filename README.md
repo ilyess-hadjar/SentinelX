@@ -13,6 +13,11 @@ SentinelX est un projet personnel orienté cybersécurité conçu pour détecter
 L’objectif est de disposer d’un outil permettant de surveiller un dossier, de comparer son état à une référence et de consulter l’historique des événements.
 
 
+## Dashboard
+
+![SentinelX Dashboard](docs/sentinelx-dashboard.png)
+
+
 
 ## Fonctionnalités
 
@@ -252,6 +257,10 @@ Ce projet me permet de mettre en pratique des notions liées à la cybersécurit
 
 
 Projet personnel réalisé dans le cadre de mon apprentissage de la programmation et de la cybersécurité.
+
+
+
+
 
 
 
